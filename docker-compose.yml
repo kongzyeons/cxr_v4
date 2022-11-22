@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  cxr_v4:
+    build: cxr_v4/
+    ports: 
+      - 8004:1212
+    networks:
+      - deploy_network
+    container_name: cxr_v4
+
+
+networks:
+  deploy_network:
+    driver: bridge
